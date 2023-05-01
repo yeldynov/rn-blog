@@ -3,18 +3,18 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import IndexScreen from './src/screens/IndexScreen';
 
-import { BlogProvider } from './src/context/BlogContext';
+import { Provider } from './src/context/BlogContext';
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <BlogProvider>
+    <Provider>
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerTitle: 'Blogs' }}>
           <Stack.Screen name='Home' component={IndexScreen} />
         </Stack.Navigator>
       </NavigationContainer>
-    </BlogProvider>
+    </Provider>
   );
 }
